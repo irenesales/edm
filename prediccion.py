@@ -9,7 +9,7 @@ import zipfile
 import io
 
 
-url = https://github.com/irenesales/edm/raw/main/valenbisi_procesado_coordenadas.zip
+url = 'https://github.com/irenesales/edm/raw/main/valenbisi_procesado_coordenadas.zip'
 response = requests.get(url)
 
 # Leer el contenido del archivo comprimido en un objeto ZipFile
