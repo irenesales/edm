@@ -3,12 +3,21 @@ import pandas as pd
 from sklearn.compose import make_column_transformer
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.linear_model import LinearRegression
+import urllib.request
+import zipfile
 
+url = 'https://github.com/lorigomeez/VALENBISI-APP/raw/main/valenbisi_procesado_coordenadas.zip'
+response = requests.get(url)
 
-ruta_archivo = "C:/Users/Usuario/Desktop/uni/tercero/EDM/proyecto/valenbisi_procesado_coordenadas.csv"
+# Leer el contenido del archivo comprimido en un objeto ZipFile
+zip_file = zipfile.ZipFile(io.BytesIO(response.content))
 
-# Cargar el archivo CSV en un DataFrame
-data = pd.read_csv(ruta_archivo)
+# Extraer el nombre del archivo CSV dentro del archivo comprimido
+csv_file_name = zip_file.namelist()[0]
+
+# Leer el archivo CSV dentro del archivo comprimido y cargarlo en un DataFrame
+data = pd.read_csv(zip_file.open(csv_file_name))
+
 
 #CREAR MODELO
 # Seleccionar las variables relevantes para la predicción
