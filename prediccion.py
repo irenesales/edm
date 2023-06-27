@@ -6,7 +6,7 @@ from sklearn.linear_model import LinearRegression
 import urllib.request
 import zipfile
 
-url = 'https://github.com/irenesales/edm/raw/main/valenbisi_procesado_coordenadas.zip'
+url = https://github.com/irenesales/edm/blob/c3ceffb1d6e4e7814786c4f1c3931b5ae8915785/valenbisi_procesado_coordenadas.zip
 response = requests.get(url)
 
 # Leer el contenido del archivo comprimido en un objeto ZipFile
