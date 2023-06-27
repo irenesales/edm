@@ -25,7 +25,7 @@ data = pd.read_csv(zip_file.open(csv_file_name))
 #CREAR MODELO
 # Seleccionar las variables relevantes para la predicción
 variables = ['Dia', 'Mes', 'Año', 'Hora','name']
-target = ['avg_av','avg_free', 'avg_total']
+target = 'avg_av'
 
 # Realizar codificación one-hot para la variable "name"
 name_encoder = OneHotEncoder(sparse=False)
