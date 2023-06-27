@@ -4,7 +4,10 @@ from sklearn.compose import make_column_transformer
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.linear_model import LinearRegression
 import urllib.request
+import requests
 import zipfile
+import io
+
 
 url = https://github.com/irenesales/edm/raw/main/valenbisi_procesado_coordenadas.zip
 response = requests.get(url)
